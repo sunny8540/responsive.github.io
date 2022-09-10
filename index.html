@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        }
+        .main   {
+            display: flex;
+            justify-content: row;
+
+        }
+        .header{
+            flex: 1;
+            margin: 14px 20px;
+        }
+        .logo{
+            font-style: italic;
+            font-weight:800;
+            font-size: 30px;
+            margin: 20px 10px;
+            flex: 1;
+            cursor: pointer;
+        }
+        .header ul li{
+            flex-direction: row-reverse;
+            list-style: none;
+            padding:12px 20px;
+            align-items: center;
+            float: right;
+            cursor: pointer;
+        }
+        .header ul li:hover{
+            background-color: #ddd;
+            border-radius:7px ;
+        }
+        @media screen  and (max-width:600px){
+            .header{
+                /* float: left; */
+                margin-left: -550px;
+                margin-top: 60px;
+                /* position: fixed; */
+            }
+            .header ul li{
+                background-color: #ddd;
+                float: none;
+            display: block;
+                cursor: pointer;
+            }
+            .header ul li:hover{
+                background-color: #ccc;
+            }
+
+            .logo{
+                float: none;
+                display: block;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="logo">LOGO </div>
+        <div class="header">
+            <ul>
+                <li>about us</li>
+                <li>news</li>
+                <li>home</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
